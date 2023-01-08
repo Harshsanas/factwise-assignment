@@ -23,10 +23,6 @@ export default function Main() {
   };
 
   const currentDate = new Date().getFullYear();
-
-  const age = (item) => {
-    console.log(item);
-  };
   return (
     <S.MainContainer>
       <h1>FactWise Assessment</h1>
@@ -61,7 +57,7 @@ export default function Main() {
               >
                 <Typography>
                   <span className="nameTag">
-                    <img src={picture} />
+                    <img src={picture} alt="profile"/>
                     <h3>
                       {first} {last}
                     </h3>
@@ -95,6 +91,30 @@ export default function Main() {
                 </Typography>
               </AccordionDetails>
               <div className="btnSection">
+                <i
+                  class="material-icons"
+                  style={{
+                    color: "blue",
+                    float: "right",
+                    fontSize: "30px",
+                    cursor: "pointer",
+                    margin: "5px 20px 20px 0",
+                  }}
+                >
+                  edit
+                </i>
+                <i
+                  class="material-icons"
+                  style={{
+                    color: "red",
+                    cursor: "pointer",
+                    float: "right",
+                    fontSize: "30px",
+                    margin: "5px 20px 20px 0",
+                  }}
+                >
+                  delete
+                </i>
               </div>
             </Accordion>
           );
