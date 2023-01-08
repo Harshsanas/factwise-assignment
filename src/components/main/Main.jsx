@@ -14,8 +14,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { DeleteIcon } from "@mui/icons-material";
-import { EditIcon } from "@mui/icons-material";
 
 export default function Main() {
   const [expanded, setExpanded] = useState(false);
@@ -98,8 +96,6 @@ export default function Main() {
                 </Typography>
               </AccordionDetails>
               <div className="btnSection">
-                <DeleteIcon />
-                <EditIcon />
               </div>
             </Accordion>
           );
