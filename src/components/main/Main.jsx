@@ -54,7 +54,6 @@ export default function Main() {
               onChange={handleChange(id)}
               className="accordionContainer"
             >
-            <div><input placeholder="Search"/></div>
               <AccordionSummary
                 aria-controls="panel1bh-content"
                 expandIcon={<ExpandMoreIcon />}
