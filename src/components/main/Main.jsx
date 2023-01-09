@@ -51,15 +51,18 @@ export default function Main() {
     setNewSearch("");
   };
 
-  const [closeIcon,setCloseIcon] = useState(false)
-  useEffect(()=>{
-    if(search.length != 0){
-      setCloseIcon(true)
-    }else{
-      setCloseIcon(false)
+  const [closeIcon, setCloseIcon] = useState(false);
+  useEffect(() => {
+    if (search.length !== 0) {
+      setCloseIcon(true);
+    } else {
+      setCloseIcon(false);
     }
+  }, [search]);
 
-  },[search])
+  const deleteItem = (i) => {
+    setOpen(false);
+  };
 
   const filtered = !search
     ? data
@@ -172,6 +175,7 @@ export default function Main() {
                     color: "red",
                     cursor: "pointer",
                     float: "right",
+                    fontWeight: "500",
                     fontSize: "30px",
                     margin: "5px 20px 20px 0",
                   }}
@@ -181,7 +185,11 @@ export default function Main() {
                   delete
                 </i>
               </div>{" "}
-              <Dialog open={open} onClose={handleToClose}>
+              <Dialog
+                open={open}
+                onClose={handleToClose}
+                style={{ background: "lightgray", opacity: "0.1" }}
+              >
                 <DialogTitle>{"Are you sure you want to Delete?"}</DialogTitle>
                 <DialogActions>
                   <Button
@@ -207,6 +215,7 @@ export default function Main() {
                       fontWeight: "500",
                       padding: "5px 15px 5px 15px",
                     }}
+                    onClick={(evt) => deleteItem(evt, id)}
                   >
                     Delete
                   </Button>
