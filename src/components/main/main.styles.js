@@ -47,7 +47,7 @@ export const MainContainer = styled.div`
 
   .search input {
     background-color: white;
-    border:1px solid lightgray;
+    border: 1px solid lightgray;
     border-radius: 8px;
     font-size: 18px;
     padding: 10px;
@@ -55,11 +55,11 @@ export const MainContainer = styled.div`
     width: 30vw;
   }
 
-  .searchIcon {    
+  .searchIcon {
     background-color: transparent;
     display: grid;
     cursor: pointer;
-    margin:0px 0 0 -40px;
+    margin: 0px 0 0 -40px;
     place-items: center;
   }
 
